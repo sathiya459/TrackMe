@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:context=".MapsActivity"
+        tools:layout="@layout/abc_list_menu_item_radio" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom In"
+        android:id="@+id/button"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom Out"
+        android:id="@+id/button2"
+        android:layout_alignBottom="@+id/map"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="Updating in every XX secs"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:editable="false"
+        android:enabled="false"
+        android:textColor="#f7fff5"
+        android:singleLine="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Increase Freq +5 Sec"
+        android:id="@+id/button3"
+        android:layout_alignBottom="@+id/map"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrease Freq -5 Sec"
+        android:id="@+id/button4"
+        android:layout_below="@+id/editText"
+        android:layout_above="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignEnd="@+id/button3" />
+</RelativeLayout>
